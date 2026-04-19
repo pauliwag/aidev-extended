@@ -29,7 +29,7 @@ data/processed/excluded_human_prs/excluded_human_prs.jsonl
 
 ```bash
 make env
-conda activate agentic-prs
+conda activate aidev-extended
 cp .env.example .env   # only needed if re-running collection
 ```
 
