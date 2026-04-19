@@ -1,0 +1,406 @@
+{
+    "labels": [
+        "05/26 14:21",
+        "07/01 00:02",
+        "08/06 15:02",
+        "09/13 15:02",
+        "10/25 06:03",
+        "12/02 12:03",
+        "01/08 15:04",
+        "04/18 00:55"
+    ],
+    "datasets": [
+        {
+            "label": "Copilot Total",
+            "type": "bar",
+            "data": [
+                8729, 21622, 76313, 183939, 350761, 591176, 833047, 1751192
+            ],
+            "backgroundColor": "#93c5fd",
+            "borderColor": "#93c5fd",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Copilot Merged",
+            "type": "bar",
+            "data": [
+                1594, 12733, 45372, 112903, 222314, 386309, 558606, 1242316
+            ],
+            "backgroundColor": "#2563eb",
+            "borderColor": "#2563eb",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Copilot Success % (Ready)",
+            "type": "line",
+            "data": [
+                75.94092424964268, 92.54306272258158, 92.1633150517977,
+                92.76775810361119, 93.20286592293535, 94.38515478022917,
+                95.07798830345654, 95.86304177392572
+            ],
+            "borderColor": "#1d4ed8",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "rateType": "ready"
+        },
+        {
+            "label": "Copilot Success % (All)",
+            "type": "line",
+            "data": [
+                18.260969183182496, 58.88909444084729, 59.45513870506991,
+                61.380675115119686, 63.380478445437205, 65.34585301162429,
+                67.05576035925944, 70.94116464670921
+            ],
+            "borderColor": "#1d4ed8",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "hidden": true,
+            "rateType": "total"
+        },
+        {
+            "label": "Codex Total",
+            "type": "bar",
+            "data": [
+                54211, 554982, 931535, 1490363, 2119006, 2504256, 2770810,
+                4087831
+            ],
+            "backgroundColor": "#fca5a5",
+            "borderColor": "#fca5a5",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Codex Merged",
+            "type": "bar",
+            "data": [
+                44230, 479543, 815811, 1300759, 1833463, 2165565, 2400282,
+                3528507
+            ],
+            "backgroundColor": "#dc2626",
+            "borderColor": "#dc2626",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Codex Success % (Ready)",
+            "type": "line",
+            "data": [
+                85.80352293008458, 87.43110517957778, 88.4419871534271,
+                88.0188304521731, 87.21585300823466, 87.1595726954622,
+                87.30063241877268, 87.16426324172849
+            ],
+            "borderColor": "#b91c1c",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "rateType": "ready"
+        },
+        {
+            "label": "Codex Success % (All)",
+            "type": "line",
+            "data": [
+                81.58860747818709, 86.40694653159923, 87.5770636637378,
+                87.27799871574912, 86.52467241716163, 86.47538430575787,
+                86.62744829129389, 86.31734041842728
+            ],
+            "borderColor": "#b91c1c",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "hidden": true,
+            "rateType": "total"
+        },
+        {
+            "label": "Cursor Total",
+            "type": "bar",
+            "data": [null, 3475, 60846, 141040, 212911, 241528, 264131, 338265],
+            "backgroundColor": "#c4b5fd",
+            "borderColor": "#c4b5fd",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Cursor Merged",
+            "type": "bar",
+            "data": [null, 2519, 37035, 79417, 115152, 133706, 148637, 196616],
+            "backgroundColor": "#7c3aed",
+            "borderColor": "#7c3aed",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Cursor Success % (Ready)",
+            "type": "line",
+            "data": [
+                null,
+                74.70344009489916,
+                78.03248983375825,
+                89.50310489006097,
+                95.96079967333061,
+                95.88096091789173,
+                95.97657359816102,
+                96.52517992675288
+            ],
+            "borderColor": "#6d28d9",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "rateType": "ready"
+        },
+        {
+            "label": "Cursor Success % (All)",
+            "type": "line",
+            "data": [
+                null,
+                72.48920863309353,
+                60.866778424218516,
+                56.308139534883715,
+                54.08457054825725,
+                55.358384949157035,
+                56.27397011331499,
+                58.12484294857582
+            ],
+            "borderColor": "#6d28d9",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "hidden": true,
+            "rateType": "total"
+        },
+        {
+            "label": "Devin Total",
+            "type": "bar",
+            "data": [null, 29407, 34995, 40479, 46921, 52253, 57776, 90992],
+            "backgroundColor": "#86efac",
+            "borderColor": "#86efac",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Devin Merged",
+            "type": "bar",
+            "data": [null, 18758, 22030, 25282, 28748, 31624, 35632, 52069],
+            "backgroundColor": "#059669",
+            "borderColor": "#059669",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Devin Success % (Ready)",
+            "type": "line",
+            "data": [
+                null,
+                65.7091813500543,
+                64.96800259518122,
+                64.49325272314482,
+                63.25331690466237,
+                62.442491855069605,
+                63.58769362552644,
+                59.08203789855895
+            ],
+            "borderColor": "#047857",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "rateType": "ready"
+        },
+        {
+            "label": "Devin Success % (All)",
+            "type": "line",
+            "data": [
+                null,
+                63.787533580440034,
+                62.951850264323475,
+                62.45707650880704,
+                61.26894141216087,
+                60.52092702811321,
+                61.67266685128773,
+                57.22371197467909
+            ],
+            "borderColor": "#047857",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "hidden": true,
+            "rateType": "total"
+        },
+        {
+            "label": "Codegen Total",
+            "type": "bar",
+            "data": [null, 4119, 5164, 7103, 7981, 8761, 9137, 9918],
+            "backgroundColor": "#fed7aa",
+            "borderColor": "#fed7aa",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Codegen Merged",
+            "type": "bar",
+            "data": [null, 1663, 2282, 2863, 3064, 3591, 3830, 4419],
+            "backgroundColor": "#d97706",
+            "borderColor": "#d97706",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Codegen Success % (Ready)",
+            "type": "line",
+            "data": [
+                null,
+                80.37699371677138,
+                74.0909090909091,
+                61.583136158313614,
+                60.18463956000786,
+                61.80722891566265,
+                62.13497728747567,
+                63.89531521110469
+            ],
+            "borderColor": "#b45309",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "rateType": "ready"
+        },
+        {
+            "label": "Codegen Success % (All)",
+            "type": "line",
+            "data": [
+                null,
+                40.373877154649186,
+                44.19054996127033,
+                40.30691257215261,
+                38.391179050244325,
+                40.98847163565803,
+                41.917478384590126,
+                44.55535390199637
+            ],
+            "borderColor": "#b45309",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "hidden": true,
+            "rateType": "total"
+        },
+        {
+            "label": "Jules Total",
+            "type": "bar",
+            "data": [null, null, null, null, 50651, 100649, 207402, 297219],
+            "backgroundColor": "#bae6fd",
+            "borderColor": "#bae6fd",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Jules Merged",
+            "type": "bar",
+            "data": [null, null, null, null, 38772, 72538, 138946, 187778],
+            "backgroundColor": "#0ea5e9",
+            "borderColor": "#0ea5e9",
+            "borderWidth": 1,
+            "yAxisID": "y",
+            "order": 2
+        },
+        {
+            "label": "Jules Success % (Ready)",
+            "type": "line",
+            "data": [
+                null,
+                null,
+                null,
+                null,
+                96.1797975788847,
+                95.78629058881009,
+                95.75746716103156,
+                92.34499173813833
+            ],
+            "borderColor": "#0369a1",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "rateType": "ready"
+        },
+        {
+            "label": "Jules Success % (All)",
+            "type": "line",
+            "data": [
+                null,
+                null,
+                null,
+                null,
+                76.54735345797714,
+                72.07026398672615,
+                66.9935680465955,
+                63.178329783762145
+            ],
+            "borderColor": "#0369a1",
+            "backgroundColor": "rgba(255, 255, 255, 0.8)",
+            "borderWidth": 3,
+            "pointRadius": 3,
+            "pointHoverRadius": 5,
+            "fill": false,
+            "yAxisID": "y1",
+            "order": 1,
+            "hidden": true,
+            "rateType": "total"
+        }
+    ]
+}

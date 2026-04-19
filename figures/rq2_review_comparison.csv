@@ -1,0 +1,13 @@
+Agent,N PRs,Med Reviews/PR,Med Reviewers/PR,APPROVED (%),CHG_REQ (%),COMMENTED (%),Empty Appr (%),Med Body Len
+Claude Code,1017,2.0,1.0,27.1,2.9,66.9,66.8,0.0
+Human (vs Claude Code),3332,1.0,1.0,41.2,2.8,53.8,73.3,0.0
+OpenAI Codex,1457,1.0,1.0,28.6,2.3,67.9,74.8,0.0
+Human (vs OpenAI Codex),3166,1.0,1.0,42.0,2.6,53.1,76.0,0.0
+GitHub Copilot,14779,1.0,1.0,48.7,7.3,42.9,87.9,0.0
+Human (vs GitHub Copilot),4028,1.0,1.0,41.0,2.5,54.1,78.1,0.0
+Cursor,717,1.0,1.0,45.0,2.2,50.1,69.5,0.0
+Human (vs Cursor),1324,1.0,1.0,42.8,1.8,52.2,76.8,0.0
+Devin,1606,1.0,1.0,67.3,11.5,20.6,91.7,0.0
+Human (vs Devin),411,1.0,1.0,35.1,4.0,58.8,75.4,0.0
+Google Labs Jules,185,1.0,1.0,51.2,8.5,36.5,75.9,0.0
+Human (vs Google Labs Jules),116,1.0,1.0,48.7,3.6,45.1,81.3,0.0

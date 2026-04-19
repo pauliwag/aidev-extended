@@ -1,0 +1,36 @@
+name: aidev-extended
+
+channels:
+    - conda-forge
+
+dependencies:
+    - python=3.14
+
+    # Data processing
+    - pandas
+    - numpy
+    - pyarrow
+
+    # Visualization
+    - matplotlib
+    - seaborn
+
+    # Jupyter
+    - jupyter
+    - ipykernel
+    - notebook
+
+    # Stats
+    - scipy
+
+    # Utils
+    - tqdm
+    - requests
+
+    # PyPI-only packages
+    - pip
+    - pip:
+          - PyGithub==2.8.1
+          - python-dotenv
+          - cliffs-delta
+          - ollama

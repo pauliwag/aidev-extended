@@ -1,0 +1,8 @@
+Agent,accept_rate,accept_med,accept_sig,accept_cliff,reject_rate,reject_med,reject_sig,reject_cliff
+Human,73.5,8.87,,,19.71,40.97,,
+Claude Code,61.55,3.33,*,negligible,27.81,39.51,,negligible
+OpenAI Codex,64.3,0.99,*,medium,27.73,10.01,*,small
+GitHub Copilot,59.92,2.14,*,small,32.08,2.59,*,small
+Cursor,60.11,0.92,*,small,30.05,7.85,*,small
+Devin,66.68,1.09,*,small,27.87,93.93,*,negligible
+Google Labs Jules,59.09,0.64,*,medium,33.62,34.15,,negligible

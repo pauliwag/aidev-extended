@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Environment
+.env
+.envrc
+
+# Conda
+# environment.lock.yml
+
+# Unzipped data (tracked as zips in data/archives/ via LFS instead)
+data/raw/
+data/processed/
+data/cache/
+
+# Keep archives and small metadata directories
+!data/archives/
+!data/pr_arena/
+
+# Outputs and logs
+results/*
+!results/.gitkeep
+logs/*.log
+figures/*
+!figures/*.csv
+!figures/*.png
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
