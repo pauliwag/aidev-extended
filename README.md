@@ -1,18 +1,36 @@
 # aidev-extended
 
-Replication package for a longitudinal study of AI coding agent pull requests on GitHub (Nov 2025 – Feb 2026), extending the AIDev dataset.
+Replication package for a longitudinal study of AI coding agent pull requests on GitHub (Nov 2025 – Feb 2026), extending the [AIDev dataset](https://huggingface.co/datasets/hao-li/AIDev).
+
+The study covers **209,934 PRs** and **65,924 code reviews** across **5,362 repositories** (≥500 GitHub stars), comparing six AI coding agents—Claude Code, OpenAI Codex, GitHub Copilot, Cursor, Devin, and Google Labs Jules—against a human-authored baseline.
+
+## Layout
+
+```
+data/
+  archives/             Zipped raw + processed data (Git LFS)
+  pr_arena/             PR Arena tracking data
+notebooks/
+  01_combine_agent_splits.ipynb   Merge per-language Phase 1 partitions
+  02_pr_analysis.ipynb            RQ1: acceptance, turnaround, task types
+  03_review_trust_analysis.ipynb  RQ2: review depth and trust patterns
+  analysis_helper.py              Shared loading / plotting / stats
+scripts/
+  collection/           GitHub API collection (Phases 1–3)
+  processing/           Human PR cleaning (bot accounts, AI leaks)
+  classification/       Conventional Commits classification (regex + LLM)
+  utils/                Shared config and GitHub client
+figures/                Generated figures, tables, and CSVs
+```
 
 ## Data
 
-Raw and processed data ship as zipped archives under `data/archives/` (tracked with Git LFS). Unzip before running anything:
+Raw and processed data ship as Git LFS archives (~114 MB total):
 
-```bash
-cd data
-unzip archives/raw.zip
-unzip archives/processed.zip
-```
+- `data/archives/raw.zip` – AI-authored PRs, human-authored PRs, human reviews, sampled PRs
+- `data/archives/processed.zip` – Conventional Commits classifications, quarantined PRs
 
-Expected layout after unzip:
+Unzipping recreates `data/raw/` and `data/processed/` in place. Expected layout after unzip:
 
 ```
 data/raw/ai_authored_prs/ai_authored_{agent}.jsonl
@@ -35,16 +53,16 @@ cp .env.example .env   # only needed if re-running collection
 
 Classification also requires [Ollama](https://ollama.com) with `qwen3:30b-instruct` pulled.
 
-## Reproduce the analysis
+## Reproduce the Analysis
 
 With the data unzipped, run the notebooks in order:
 
-1. `notebooks/00_pr_analysis.ipynb` – RQ1 (contribution profiles, acceptance rates, turnaround)
-2. `notebooks/02_review_trust_analysis.ipynb` – RQ2 (review depth, trust patterns)
+1. `notebooks/02_pr_analysis.ipynb` – RQ1 (contribution profiles, acceptance rates, turnaround)
+2. `notebooks/03_review_trust_analysis.ipynb` – RQ2 (review depth, trust patterns)
 
-Figures and LaTeX tables are written to `figures/`.
+Generated figures and LaTeX tables land in `figures/`.
 
-## Re-run collection from scratch
+## Re-run Collection from Scratch
 
 Requires a GitHub personal access token in `.env` and takes ~1.5 weeks of wall time.
 
@@ -60,19 +78,22 @@ jupyter nbconvert --execute notebooks/01_combine_agent_splits.ipynb
 python scripts/processing/clean_human_prs.py --discover   # inspect
 python scripts/processing/clean_human_prs.py              # apply
 
-# Classify:
+# Classify with regex + LLM:
 python scripts/classification/classify_prs.py
 ```
 
-## Layout
+## Citation
 
-```
-data/              Zipped archives (LFS) + pr_arena tracking data
-notebooks/         Analysis notebooks and helpers
-scripts/
-  collection/      GitHub API collection
-  processing/      Human PR cleaning
-  classification/  Conventional Commits classification (regex + LLM)
-  utils/           Shared config and GitHub client
-figures/           Generated figures and tables
+See the accompanying paper for methodology and full results. AIDev, which this work extends:
+
+```bibtex
+@misc{li2025aiteammates,
+      title={The Rise of AI Teammates in Software Engineering (SE) 3.0: How Autonomous Coding Agents Are Reshaping Software Engineering}, 
+      author={Hao Li and Haoxiang Zhang and Ahmed E. Hassan},
+      year={2025},
+      eprint={2507.15003},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2507.15003}, 
+}
 ```

@@ -1,5 +1,5 @@
 """
-Generate PR Arena cumulative PR volume chart for the paper introduction.
+Generate PR Arena cumulative PR volume chart.
 
 Expects:
     data/pr_arena/chart-data.json (copy from PR Arena repo docs/chart-data.json)
@@ -23,8 +23,10 @@ import numpy as np
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path(__file__).resolve().parent.parent  # notebooks/ -> project root
-INPUT_FILE = PROJECT_ROOT / "data" / "pr_arena" / "chart-data.json"
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from scripts.utils.config import DATA_DIR, PROJECT_ROOT
+
+INPUT_FILE = DATA_DIR / "pr_arena" / "chart-data.json"
 FIG_DIR = PROJECT_ROOT / "figures"
 FIG_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_FILE = FIG_DIR / "pr_arena_growth"
@@ -186,8 +188,8 @@ def plot_pr_arena_growth(agents: dict, out_fp: Path) -> None:
     plt.show()
     plt.close(fig)
 
-    print(f"Saved: {out_fp.with_suffix('.pdf')}")
-    print(f"Saved: {out_fp.with_suffix('.png')}")
+    print(f"Saved: {out_fp.with_suffix('.pdf').relative_to(PROJECT_ROOT)}")
+    print(f"Saved: {out_fp.with_suffix('.png').relative_to(PROJECT_ROOT)}")
 
 
 # ---------------------------------------------------------------------------
@@ -195,8 +197,8 @@ def plot_pr_arena_growth(agents: dict, out_fp: Path) -> None:
 # ---------------------------------------------------------------------------
 def main():
     if not INPUT_FILE.exists():
-        print(f"ERROR: {INPUT_FILE} not found")
-        print(f"Copy chart-data.json from PR Arena repo to {INPUT_FILE}")
+        print(f"ERROR: {INPUT_FILE.relative_to(PROJECT_ROOT)} not found")
+        print(f"Copy chart-data.json from PR Arena repo to {INPUT_FILE.relative_to(PROJECT_ROOT)}")
         sys.exit(1)
 
     data = load_chart_data(INPUT_FILE)
