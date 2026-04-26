@@ -67,14 +67,18 @@ Generated figures and LaTeX tables land in `figures/`.
 Requires a GitHub personal access token in `.env` and takes ~1.5 weeks of wall time.
 
 ```bash
-# Set COLLECT_FROM_DATE and COLLECT_TO_DATE in .env, then:
+# Set COLLECT_FROM_DATE and COLLECT_TO_DATE in .env, then run
+# Phase 1 + 2 (AI-authored PRs with their human reviews, and human-authored PRs):
 python scripts/collection/collect_ai_human_prs_reviews.py
-python scripts/collection/collect_human_pr_reviews.py
 
-# After combining language splits:
+# Combine per-language splits into single files per agent:
 jupyter nbconvert --execute notebooks/01_combine_agent_splits.ipynb
 
-# Clean human PRs of bot/leaked-AI entries:
+# Phase 3 (human reviews on a stratified sample of human-authored PRs).
+# Must run after Phase 1 finishes - the sampler reads AI PR files to build per-agent strata:
+python scripts/collection/collect_human_pr_reviews.py
+
+# Clean human PRs of bot accounts and leaked-AI attribution:
 python scripts/processing/clean_human_prs.py --discover   # inspect
 python scripts/processing/clean_human_prs.py              # apply
 
